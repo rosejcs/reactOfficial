@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Reactday01</h2>
+  <div id="box"></div>
+  <script src="../js/react.development.js"></script>
+  <script src="../js/react-dom.development.js"></script>
+  <script src="../js/babel.min.js"></script>
+  <script type="text/babel">
+    function NumberList(props) {
+      const numbers = props.numbers;
+      const listItems = numbers.map(number=>
+        <li key={number}>{number}</li>
+      )
+      return (
+        <ul>{listItems}</ul>
+      )
+    }
+    const numbers = [1,2,3,4,5]
+    // 在组件类上把数据作为props传入组件类中
+    ReactDOM.render(
+      <NumberList numbers={numbers} />,
+      box
+    )
+  
+  
+  
+  </script>
+</body>
+</html>
